@@ -1,0 +1,108 @@
+Dec 22 11:41:15 ubuntu NetworkManager[986]: <info>  [1513939275.5593] audit: op="sleep-control" arg="off" pid=2807 uid=0 result="fail" reason="Already awake"
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.0968] dhcp4 (ens33): state changed bound -> expire
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.0986] dhcp4 (ens33): canceled DHCP transaction, DHCP client pid 1178
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.0986] dhcp4 (ens33): state changed expire -> done
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.0992] device (ens33): state change: activated -> failed (reason 'ip-config-expired') [100 120 6]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.0996] manager: NetworkManager state is now CONNECTED_LOCAL
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1000] manager: NetworkManager state is now DISCONNECTED
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <warn>  [1513939628.1089] device (ens33): Activation: failed for connection 'Wired connection 1'
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1124] device (ens33): state change: failed -> disconnected (reason 'none') [120 30 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1372] dns-mgr: Writing DNS information to /sbin/resolvconf
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1791] policy: auto-activating connection 'Wired connection 1'
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1840] device (ens33): Activation: starting connection 'Wired connection 1' (e213bba4-7b5c-35b8-b8d0-f3f47037b8d0)
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <warn>  [1513939628.1843] (pid 1178) unhandled DHCP event for interface ens33
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1845] device (ens33): state change: disconnected -> prepare (reason 'none') [30 40 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1847] manager: NetworkManager state is now CONNECTING
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1852] device (ens33): state change: prepare -> config (reason 'none') [40 50 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1867] device (ens33): state change: config -> ip-config (reason 'none') [50 70 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1871] dhcp4 (ens33): activation: beginning transaction (timeout in 45 seconds)
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.1901] dhcp4 (ens33): dhclient started with pid 3409
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6136]   address 192.168.244.148
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6152]   plen 24 (255.255.255.0)
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6162]   gateway 192.168.244.2
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6166]   server identifier 192.168.244.254
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6169]   lease time 1800
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6189]   nameserver '192.168.244.2'
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6207]   domain name 'localdomain'
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6219]   wins '192.168.244.2'
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6227] dhcp4 (ens33): state changed unknown -> bound
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6275] device (ens33): state change: ip-config -> ip-check (reason 'none') [70 80 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6280] device (ens33): state change: ip-check -> secondaries (reason 'none') [80 90 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6284] device (ens33): state change: secondaries -> activated (reason 'none') [90 100 0]
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6285] manager: NetworkManager state is now CONNECTED_LOCAL
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6346] manager: NetworkManager state is now CONNECTED_GLOBAL
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6359] policy: set 'Wired connection 1' (ens33) as default for IPv4 routing and DNS
+Dec 22 11:47:08 ubuntu NetworkManager[986]: <info>  [1513939628.6369] dns-mgr: Writing DNS information to /sbin/resolvconf
+Dec 22 11:47:11 ubuntu NetworkManager[986]: <info>  [1513939631.1646] device (ens33): Activation: successful, device activated.
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5021]   address 192.168.244.148
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   plen 24 (255.255.255.0)
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   gateway 192.168.244.2
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   server identifier 192.168.244.254
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   lease time 1800
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   nameserver '192.168.244.2'
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   domain name 'localdomain'
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022]   wins '192.168.244.2'
+Dec 22 11:59:28 ubuntu NetworkManager[986]: <info>  [1513940368.5022] dhcp4 (ens33): state changed bound -> bound
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0058]   address 192.168.244.148
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0063]   plen 24 (255.255.255.0)
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0068]   gateway 192.168.244.2
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0072]   server identifier 192.168.244.254
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0077]   lease time 1800
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0081]   nameserver '192.168.244.2'
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0085]   domain name 'localdomain'
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0086]   wins '192.168.244.2'
+Dec 22 12:13:31 ubuntu NetworkManager[986]: <info>  [1513941211.0087] dhcp4 (ens33): state changed bound -> bound
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2414]   address 192.168.244.148
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   plen 24 (255.255.255.0)
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   gateway 192.168.244.2
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   server identifier 192.168.244.254
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   lease time 1800
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   nameserver '192.168.244.2'
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2415]   domain name 'localdomain'
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2416]   wins '192.168.244.2'
+Dec 22 12:28:23 ubuntu NetworkManager[986]: <info>  [1513942103.2416] dhcp4 (ens33): state changed bound -> bound
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6656]   address 192.168.244.148
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6656]   plen 24 (255.255.255.0)
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6656]   gateway 192.168.244.2
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657]   server identifier 192.168.244.254
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657]   lease time 1800
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657]   nameserver '192.168.244.2'
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657]   domain name 'localdomain'
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657]   wins '192.168.244.2'
+Dec 22 12:42:51 ubuntu NetworkManager[986]: <info>  [1513942971.6657] dhcp4 (ens33): state changed bound -> bound
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8453]   address 192.168.244.148
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8458]   plen 24 (255.255.255.0)
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8459]   gateway 192.168.244.2
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8459]   server identifier 192.168.244.254
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8459]   lease time 1800
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8459]   nameserver '192.168.244.2'
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8460]   domain name 'localdomain'
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8460]   wins '192.168.244.2'
+Dec 22 12:56:07 ubuntu NetworkManager[986]: <info>  [1513943767.8460] dhcp4 (ens33): state changed bound -> bound
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5003]   address 192.168.244.148
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5011]   plen 24 (255.255.255.0)
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5012]   gateway 192.168.244.2
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5013]   server identifier 192.168.244.254
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5013]   lease time 1800
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5013]   nameserver '192.168.244.2'
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5014]   domain name 'localdomain'
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5014]   wins '192.168.244.2'
+Dec 22 13:09:58 ubuntu NetworkManager[986]: <info>  [1513944598.5015] dhcp4 (ens33): state changed bound -> bound
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2073]   address 192.168.244.148
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2083]   plen 24 (255.255.255.0)
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2088]   gateway 192.168.244.2
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2092]   server identifier 192.168.244.254
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2096]   lease time 1800
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2100]   nameserver '192.168.244.2'
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2100]   domain name 'localdomain'
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2101]   wins '192.168.244.2'
+Dec 22 13:22:14 ubuntu NetworkManager[986]: <info>  [1513945334.2101] dhcp4 (ens33): state changed bound -> bound
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5168]   address 192.168.244.148
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5169]   plen 24 (255.255.255.0)
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5170]   gateway 192.168.244.2
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5170]   server identifier 192.168.244.254
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5170]   lease time 1800
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5170]   nameserver '192.168.244.2'
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5171]   domain name 'localdomain'
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5171]   wins '192.168.244.2'
+Dec 22 13:33:52 ubuntu NetworkManager[986]: <info>  [1513946032.5171] dhcp4 (ens33): state changed bound -> bound

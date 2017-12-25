@@ -1,0 +1,36 @@
+Dec 21 22:49:09 ubuntu kernel: [    0.373739] ACPI: bus type USB registered
+Dec 21 22:49:09 ubuntu kernel: [    0.373750] usbcore: registered new interface driver usbfs
+Dec 21 22:49:09 ubuntu kernel: [    0.373756] usbcore: registered new interface driver hub
+Dec 21 22:49:09 ubuntu kernel: [    0.373788] usbcore: registered new device driver usb
+Dec 21 22:49:09 ubuntu kernel: [    1.572607] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Dec 21 22:49:09 ubuntu kernel: [    1.572927] ehci-pci 0000:02:03.0: new USB bus registered, assigned bus number 1
+Dec 21 22:49:09 ubuntu kernel: [    1.586172] ehci-pci 0000:02:03.0: USB 2.0 started, EHCI 1.00
+Dec 21 22:49:09 ubuntu kernel: [    1.586232] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+Dec 21 22:49:09 ubuntu kernel: [    1.586234] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec 21 22:49:09 ubuntu kernel: [    1.586235] usb usb1: Product: EHCI Host Controller
+Dec 21 22:49:09 ubuntu kernel: [    1.586236] usb usb1: Manufacturer: Linux 4.4.0-104-generic ehci_hcd
+Dec 21 22:49:09 ubuntu kernel: [    1.586237] usb usb1: SerialNumber: 0000:02:03.0
+Dec 21 22:49:09 ubuntu kernel: [    1.586440] hub 1-0:1.0: USB hub found
+Dec 21 22:49:09 ubuntu kernel: [    1.586655] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Dec 21 22:49:09 ubuntu kernel: [    1.586685] uhci_hcd: USB Universal Host Controller Interface driver
+Dec 21 22:49:09 ubuntu kernel: [    1.587031] uhci_hcd 0000:02:00.0: new USB bus registered, assigned bus number 2
+Dec 21 22:49:09 ubuntu kernel: [    1.587394] usb usb2: New USB device found, idVendor=1d6b, idProduct=0001
+Dec 21 22:49:09 ubuntu kernel: [    1.587395] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Dec 21 22:49:09 ubuntu kernel: [    1.587397] usb usb2: Product: UHCI Host Controller
+Dec 21 22:49:09 ubuntu kernel: [    1.587398] usb usb2: Manufacturer: Linux 4.4.0-104-generic uhci_hcd
+Dec 21 22:49:09 ubuntu kernel: [    1.587399] usb usb2: SerialNumber: 0000:02:00.0
+Dec 21 22:49:09 ubuntu kernel: [    1.587686] hub 2-0:1.0: USB hub found
+Dec 21 22:49:09 ubuntu kernel: [    1.901603] usb 2-1: new full-speed USB device number 2 using uhci_hcd
+Dec 21 22:49:09 ubuntu kernel: [    2.832334] usb 2-1: New USB device found, idVendor=0e0f, idProduct=0003
+Dec 21 22:49:09 ubuntu kernel: [    2.832339] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Dec 21 22:49:09 ubuntu kernel: [    2.832342] usb 2-1: Product: VMware Virtual USB Mouse
+Dec 21 22:49:09 ubuntu kernel: [    2.832344] usb 2-1: Manufacturer: VMware
+Dec 21 22:49:09 ubuntu kernel: [    2.949324] usb 2-2: new full-speed USB device number 3 using uhci_hcd
+Dec 21 22:49:09 ubuntu kernel: [    3.089494] usb 2-2: New USB device found, idVendor=0e0f, idProduct=0002
+Dec 21 22:49:09 ubuntu kernel: [    3.089496] usb 2-2: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+Dec 21 22:49:09 ubuntu kernel: [    3.089498] usb 2-2: Product: VMware Virtual USB Hub
+Dec 21 22:49:09 ubuntu kernel: [    3.098605] hub 2-2:1.0: USB hub found
+Dec 21 22:49:09 ubuntu kernel: [    3.126622] usbcore: registered new interface driver usbhid
+Dec 21 22:49:09 ubuntu kernel: [    3.126624] usbhid: USB HID core driver
+Dec 21 22:49:09 ubuntu kernel: [    3.127881] input: VMware VMware Virtual USB Mouse as /devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/0003:0E0F:0003.0001/input/input5
+Dec 21 22:49:09 ubuntu kernel: [    3.128051] hid-generic 0003:0E0F:0003.0001: input,hidraw0: USB HID v1.10 Mouse [VMware VMware Virtual USB Mouse] on usb-0000:02:00.0-1/input0
