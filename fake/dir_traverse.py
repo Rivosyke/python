@@ -24,15 +24,49 @@ import datetime
 #os.chdir("/")
 #sets the output format for doing timestamps
 time_format = "%Y-%m-%d %H:%M:%S"
-
-
-
-startingList = os.listdir(".")
-dirList = []
-fileList = []
 dashes = "----"
-print os.getcwd()
 
+def traverse(dirList, dashes):
+	if not dirList:
+		os.chdir("..")
+		return 1
+	else:
+		cwd = dirList.pop()
+		os.chdir(cwd)
+		print dashes + cwd
+		processDir(dashes)
+		traverse(dirList, dashes)
+		return 0
+		
+	
+def processDir (dashes):
+	
+	dashes = dashes + "----"
+	files = []
+	dirs = []
+	workingList = os.listdir(".")
+	for item in workingList:
+		if os.path.isfile(item):
+			files.append(item)
+		else:
+			dirs.append(item)
+	
+	printFiles(files, dashes)
+	while traverse(dirs, dashes) !=1:
+		return
+
+	
+def printFiles(fileList, dashes):
+	for item in fileList:
+		print dashes + item
+
+
+startingDashes = ""
+processDir(startingDashes)
+
+
+
+"""
 for item in startingList:
 	if os.path.isfile(item):
 		fileList.append(item)
@@ -41,13 +75,27 @@ for item in startingList:
 
 for item in fileList:
 	print dashes + item.strip()
-	
-while not dirList:
-	dashes = dashes + dashes
-	continue
 
-print dashes
-print os.getcwd()
+	
+while dirList:
+	cwd = dirList.pop()
+	print dashes + "----" + cwd
+	os.chdir(cwd)
+	
+	workingList = os.listdir(".")
+	workingFileList = []
+	workingDirList = []
+	
+	for item in workingList:
+		if os.path.isfile(item):
+			workingFileList.append(item)
+		else:
+			workingDirList.append(item)
+	
+	
+	
+	print 1
+"""
 """
 for item in current_list:
 	if os.path.isfile(item):

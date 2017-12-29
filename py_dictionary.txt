@@ -1,0 +1,65 @@
+Python Dictionary:
+	
+	Common Test Types:
+		- Extracting the last digit in a number: <number> % 10
+		- Testing for even or odd: <number> % 2 == 0 (even)
+
+	Type Casting
+		- int(): Turn a string into an int
+		- str(): Turn anything into a string
+
+	Commands on objects:
+		- .title(): Makes first letter of a sentence upper-case
+		- .lower(): Makes all string elements lower-case
+		- .upper(): Makes all string elements upper-case
+		- len(variable): gives the length of the variable (character length of a string or number of elements in an array)
+
+	Loops and Decision Structures:
+		- For loop: "for x in list_of_stuff"
+		- If and elif: If this, then do this else if this, then do this.
+		- While: Continue doing block of code until condition is met.
+		- Break: Used to terminate processing of a loop.
+		- Continue: Used to skip processing of the current iteration of a loop but not breaking the loop.
+		
+		
+	Types of arrays
+		- List: Single elements, uses [] notation
+			- Several Way to initialize the list:
+				- Direct value assignment
+				- Empty list: var = []
+				- Ranges (e.g. list(range(1,21)))
+				- W/e this is: [value**2 for value in range(1,11)]
+			- Operations on the List:
+				- list.append('value')
+				- list.remove('value'): removes one instance of value from a list
+				- list.sort(<options>): sorts the list - can use "reverse=True" to sort the list in reverse options
+			- Accessing Elements:
+				- Directly by index
+				- Relative to last elements: [-2], [-3], etc
+				- First 3: [:3]
+				- .pop() method: Removes the last entry into the list and assigns to a variable. Good for processing a list of things in a while loop
+		- Tuple: A list but with unchangeable values, uses () notation
+		- Dictionary: Key -> Value pairs, uses {} notation - {'first': 'ryan', 'last': 'mcginn'}
+			- Uses the following methods:
+				- .items(): access all the elements in the dictionary
+				- .values(): access just the values
+				- .keys(): access just the keys
+				
+	User Input
+		- input('prompt') (python 3)
+		- raw_input('prompt'): Always returns a string unless casted
+		
+	Functions
+		- Type of calling:
+			- Positional Arguments: standard way, pass parameters in order of appearance in function
+			- Keyword Arguements: pass parameters to explicit function arguement vlues - "pet_name = 'harry'"
+			- Default Values: no arguements passed but the function has predefined values
+				- Can also have optional default values by assigning the value an empty string ('') and moving it to the end of the parameters list
+			- Pass a copy: A list can be copied into a function by using this notatation: function_name(list_name[:])
+			- Unknown number of parameters: In the function definition, use a *value to have the function make a tuple out of whatever gets passed to it (def function(*a_value))
+			- Unknown number of key/value parameters: Same as above but use **value to build a dictionary of the key/value pairs given. Then accessed by (for key, value in value.items())
+			
+	Multiprocessing
+		- Modules:
+			- multiprocessing
+			- threading
