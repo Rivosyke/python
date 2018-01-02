@@ -33,7 +33,8 @@ def traverse(dirList, dashes):
 	else:
 		cwd = dirList.pop()
 		os.chdir(cwd)
-		print dashes + cwd
+		directory.append(dashes + cwd + "\n")
+		#print dashes + cwd
 		processDir(dashes)
 		traverse(dirList, dashes)
 		return 0
@@ -58,11 +59,15 @@ def processDir (dashes):
 	
 def printFiles(fileList, dashes):
 	for item in fileList:
-		print dashes + item
+		directory.append(dashes + item + "\n")
+		#print dashes + item
 
+global directory = []
 
 startingDashes = ""
 processDir(startingDashes)
+
+
 
 
 

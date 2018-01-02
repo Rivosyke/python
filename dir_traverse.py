@@ -24,82 +24,85 @@ import datetime
 #os.chdir("/")
 #sets the output format for doing timestamps
 time_format = "%Y-%m-%d %H:%M:%S"
-
-
-
-startingList = os.listdir(".")
-dirList = []
-fileList = []
 dashes = "----"
-print os.getcwd()
 
-for item in startingList:
-	if os.path.isfile(item):
-		fileList.append(item)
-	elif os.path.isdir(item):
-		dirList.append(item)
-
-for item in fileList:
-	print dashes + item.strip()
-	
-while not dirList:
-	dashes = dashes + dashes
-	continue
-
-print dashes
-print os.getcwd()
-"""
-for item in current_list:
-	if os.path.isfile(item):
-		print item.strip() + "\t\tF"
-	elif os.path.isdir(item):
-		print item.strip() + "\t\tD"
-"""
-"""
-for item in current_list:
-	info = os.stat(item)
-	print item
-	print "\t" + str(info.st_size)
-	info_time = datetime.datetime.utcfromtimestamp(info.st_mtime)
-	print "\t" + info_time.strftime(time_format) + "\n"
-"""
-"""
-for item in current_list:
-	if os.path.isfile(item):
-		print item.strip() + "\t\tF"
-	elif os.path.isdir(item):
-		print item.strip() + "\t\tD"
-"""
-"""
-for item in glob.glob(os.path.join(".", "*")):
-	print item
-"""
-
-
-"""
-while (os.getcwd() != target):
-	print "Currently in:\t" + os.getcwd()
-	cwd = os.getcwd()
-	dirList = os.listdir(".")
-	
-	for item in dirList:
-		if item in target_list:
-			if cwd == "/":
-				cwd = os.getcwd() + item
-				os.chdir(cwd)
-				break
-			else:
-				cwd = os.getcwd() + '/' + item
-				os.chdir(cwd)
-				break
-
-print "Currently in:\t" + os.getcwd()
-"""
-	
-	
-	
+def traverse(dirList, dashes):
+	if not dirList:
+		os.chdir("..")
+		return 1
+	else:
+		cwd = dirList.pop()
+		os.chdir(cwd)
+		directory.append(dashes + cwd + "\n")
+		#print dashes + cwd
+		processDir(dashes)
+		traverse(dirList, dashes)
+		return 0
 		
-		
+	
+def processDir (dashes):
+	
+	dashes = dashes + "----"
+	files = []
+	dirs = []
+	workingList = os.listdir(".")
+	for item in workingList:
+		if os.path.isfile(item):
+			files.append(item)
+		else:
+			dirs.append(item)
+	
+	printFiles(files, dashes)
+	while traverse(dirs, dashes) !=1:
+		return
+
+	
+def printFiles(fileList, dashes):
+	for item in fileList:
+		directory.append(dashes + item + "\n")
+		#print dashes + item
+
+directory = []
+
+startingDashes = ""
+processDir(startingDashes)
 
 
+import socket
+# Address Family   Reliability Option (TCP), SOCK_DGRAM (UDP)
+tcpSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+# Socket option that allows quick reuse of interface/port pairings
+tcpSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+# Interface to listen on, port number (as a tuple)
+tcpSocket.bind(("0.0.0.0", 8000))
+
+# Max number of concurrent connections
+tcpSocket.listen(2)
+
+print "Waiting for client..."
+# accept() is a blocking call - will wait until a client connects
+(client, (ip, port)) = tcpSocket.accept()
+
+
+for x in directory:
+	client.send((str(x)))
+
+"""
+# data has to be "something" for the while loop to work
+data = 'dummy'
+
+# while client still sends data
+while len(data):
+	# receives data from the client
+	data = client.recv(2048)
+	print "Client sent: ", data
+	# sends the same data back to the client
+	client.send(data)
+"""
+print "Closing connection..."
+client.close()
+
+print "Shutting down server..."
+tcpSocket.close()
