@@ -42,8 +42,22 @@ tcp_hdr = struct.unpack("!HH16s", tcpHeader)
 """
 while True:
 	dashes = "---- "
-	pkt = rawSocket.recvfrom(2048)
+	pkt = rawSocket.recvfrom(65300)
 	if struct.unpack("!9sb10s", pkt[0][14:34])[1] == 6:
+		tcpHeader = pkt[0][34:54]
+		tcp_hdr = struct.unpack("!HHII8s", tcpHeader)
+		if tcp_hdr[0] == 80:
+			ipHeader = pkt[0][14:34]
+			ip_hdr = struct.unpack("!12s4s4s", ipHeader)
+			print "Source IP address:  " + socket.inet_ntoa(ip_hdr[1])
+			print "Dest IP address:  " + socket.inet_ntoa(ip_hdr[2])
+			print "Attempting to output HTTP header info..."
+			httpHeader = pkt[0][54:]
+			print "Raw header:\n"+ httpHeader
+			#http_hdr = struct.unpack("!16s", httpHeader)
+			#print "Result of first 16 bytes:\t" + http_hdr
+			
+		"""
 		# Print Source/Dest IPs
 		ipHeader = pkt[0][14:34]
 		ip_hdr = struct.unpack("!12s4s4s", ipHeader)
@@ -57,6 +71,8 @@ while True:
 		print dashes + "Destination Port:\t" + str(tcp_hdr[1])
 		print dashes + "Sequence Number:\t" + str(tcp_hdr[2])
 		print dashes + "Acknow Number:\t" + str(tcp_hdr[3])
+		"""
+		
 	else:
 		continue
 
