@@ -34,7 +34,9 @@ Python Dictionary:
 				- Direct value assignment
 				- Empty list: var = []
 				- Ranges (e.g. list(range(1,21)))
-				- W/e this is: [value**2 for value in range(1,11)]
+				- List Comprehensions (see below)
+				- Assignment from another list: Use a slice - x = y[:]
+				
 			- Operations on the List:
 				- list.append('value')
 				- list.remove('value'): removes one instance of value from a list
@@ -63,6 +65,11 @@ Python Dictionary:
 				- .items(): access all the elements in the dictionary
 				- .values(): access just the values
 				- .keys(): access just the keys
+			- Looping/Processing
+				- Dictionaries are not in any sort of order
+				- Can pass the dictionary keys to sorted() in a for loop: sorted(dict.keys())
+				- Can eliminate duplicate values by using a set: set(dict.values())
+			
 				
 	User Input
 		- input('prompt') (python 3)
