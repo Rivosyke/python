@@ -78,9 +78,10 @@ Python Dictionary:
 	Functions
 		- Type of calling:
 			- Positional Arguments: standard way, pass parameters in order of appearance in function
-			- Keyword Arguements: pass parameters to explicit function arguement vlues - "pet_name = 'harry'"
+			- Keyword Arguements: pass parameters to explicit function arguement values in the function call - describe_pet(animal_type='hamster', pet_name='harry')
 			- Default Values: no arguements passed but the function has predefined values
 				- Can also have optional default values by assigning the value an empty string ('') and moving it to the end of the parameters list
+				- All parameters with default values need to be after all non-default parameters in the function definition
 			- Pass a copy: A list can be copied into a function by using this notatation: function_name(list_name[:])
 			- Unknown number of parameters: In the function definition, use a *value to have the function make a tuple out of whatever gets passed to it (def function(*a_value))
 			- Unknown number of key/value parameters: Same as above but use **value to build a dictionary of the key/value pairs given. Then accessed by (for key, value in value.items())
