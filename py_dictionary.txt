@@ -82,8 +82,57 @@ Python Dictionary:
 			- Default Values: no arguements passed but the function has predefined values
 				- Can also have optional default values by assigning the value an empty string ('') and moving it to the end of the parameters list
 				- All parameters with default values need to be after all non-default parameters in the function definition
-			- Pass a copy: A list can be copied into a function by using this notatation: function_name(list_name[:])
+			- Pass a copy: A list can be copied into a function by using this notatation: 
+				- function_name(list_name[:])
 			- Unknown number of parameters: In the function definition, use a *value to have the function make a tuple out of whatever gets passed to it (def function(*a_value))
 			- Unknown number of key/value parameters: Same as above but use **value to build a dictionary of the key/value pairs given. Then accessed by (for key, value in value.items())
+	
+	Modules:
+		- Import Methods:
+			- Entire Modules:
+				- Desc: This will copy all functions from the module into the program
+				- format: import <module_name>
+				- ex: import pizza 
+				- Call with: <module_name>.<function_name>
+			- Specific Functions:
+				- Desc: Imports only the named function and won't require the module name to call
+				- Format: from <module_name> import <function_name>
+				- ex: from pizza import make_pizza
+				- Call with: <function_name>(parameters)
+			- All functions from a module:
+				- Desc: Like the specific function import, it will make ALL functions available without the module name - dangerous if doing large modules
+				- Format: from <module_name> import *
+				- ex: from pizza import *
+				- Call with: <function_name>(parameters)
+				
+		- Aliases:
+			- Import specific functions and give them a different name (if there is a conflict or just want to abbreviate)
+				- format: from <module> import <function_name> as <alias_name>
+				- ex: from pizza import make_pizza as mp
+			- Import modules and give them a different name (if the module name is long)
+				- format : import <module_name> as <alias_name>
+				- ex: import pizza as p
+	
+	Classes:
+		- Declaration:
+			- Desc: Begins with a capital letter by convention only
+			- Format: class <Class_name> ()
+			- ex: class Dog(object)
+			- Notes:
+				- The object in the class declaration is to make python 2.7 classes more like python 3 classes
+				- Python classes attributes can be access directly by the instance. No concept of private vs public
+		- Methods:
+			- All class methods require at least the <self> argument. 
+			- Format: <function_name> (self)
+			- ex: roll_over (self)
+		- Constructor
+			- Desc: Initializes values during instantiation. 
+			- Format: __init__ (self, <parameters>)
+			- ex: __init__ (self, name, age)
+			- Notes:
+				- Instance variables must be declared and assigned with the following:
+					- self.<variable_name> = <argument_name>
+				- Returns a pointer to the new instance - gets assigned to the calling variable declaration
+			
 			
 	
