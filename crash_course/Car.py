@@ -31,7 +31,16 @@ class Car(object):
 			self.odometer_reading += miles
 		else:
 			print "You can't add negative miles to the odometer!"
-		
+
+class ElectricCar(Car):
+	""" Simulates an electric car """
+	def __init(self, make, model, year):
+		""" Initialize Attributes of the parent class. """
+		super(ElectricCar,self).__init__(make,model,year)
+		self.battery_size = 70	
+	def describe_battery(self):
+		""" Print a statement about the size of the battery """
+		print("This car has a " + str(self.battery_size) + "-kWh battery.")
 		
 	
 	

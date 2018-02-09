@@ -133,6 +133,14 @@ Python Dictionary:
 				- Instance variables must be declared and assigned with the following:
 					- self.<variable_name> = <argument_name>
 				- Returns a pointer to the new instance - gets assigned to the calling variable declaration
-			
+		- Inheritance:
+			- Desc: Inherits all attributes and methods from parent class
+			- Format: class <Class_name> (<Parent_Class_name)
+			- ex: class ElectricCar(Car)
+			- Constructor:
+				- Desc: Need to initialize all values from the parent class as well as its own attributes
+				- Format: super().__init__(<parent_class_attribute_parameters)
+				- ex: super().__init__(make, model, year)
+	
 			
 	
