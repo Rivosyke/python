@@ -142,5 +142,50 @@ Python Dictionary:
 				- Format: super().__init__(<parent_class_attribute_parameters)
 				- ex: super().__init__(make, model, year)
 	
+	Files:
+		- Notes:
+			- File Objects are created when opening files and all operations are done on the FOs.
+			- Format: with open('<filename>', <options>) as <variable_name>
+				- File open options: 'r' (read), 'w' (write), 'a' (append)', 'r+' (read and write)
+					- Opens with 'r' by default if no option given.
+					- Opening with 'w' will overwrite an existing file 
+			- ex: with open ('pi_digits') as file_object
+			- Files get read in with a newline char. When processing, using line.rstrip() to remove the whitespace.
+			- Using with to open files, the proper open/closing of file handles is done automatically. 
+		- Read Operations on FOs:
+			- for line in file_object: Allows user to process and perform actions on each line as it is read in
+			- lines = file_object.readlines(): Stores all lines in the file in a list that can be processed later
+		- Write Operations on FOs:
+			- write(): file_object.write(<stuff>) - Writes content to the same line unless given a newline operator
+			
+	Exception: 	
+		- Notes:
+			- Errors not handled by exceptions get tracebacks and halt program execution
+			- When errors are encountered, an exception object is generated that will contain information about the error.
+				- These objects are what the try/catch blocks will trigger on 
+			- try/except/else is like an if statement. The try is the if, the except statement is the first condition, the else is the inverse
+			- In the except statement, can alias the error in order to interact with it
+				- ex: except IOError as e
+		- General Format:
+			- try:
+				<code to try goes here>
+			  except <exception object name>:
+				<things to do if an error is caught>
+			  else:
+				<code to run if the try block is successful>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			
 	
