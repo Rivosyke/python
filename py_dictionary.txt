@@ -85,7 +85,8 @@ Python Dictionary:
 			- Pass a copy: A list can be copied into a function by using this notatation: 
 				- function_name(list_name[:])
 			- Unknown number of parameters: In the function definition, use a *value to have the function make a tuple out of whatever gets passed to it (def function(*a_value))
-			- Unknown number of key/value parameters: Same as above but use **value to build a dictionary of the key/value pairs given. Then accessed by (for key, value in value.items())
+			- Unkn
+			own number of key/value parameters: Same as above but use **value to build a dictionary of the key/value pairs given. Then accessed by (for key, value in value.items())
 	
 	Modules:
 		- Import Methods:

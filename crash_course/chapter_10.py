@@ -21,13 +21,56 @@ with open('pi_million_digits.txt') as file_object:
 		birthday = raw_input("Birthday in 'ddmmyy' format: ")
 """
 
-filename = "alice2.txt"
-AIW_text = ""
 
+"""
+def count_words(filename):
+	raw_text = ""
+	try:
+		with open(filename) as fo:
+			raw_text = fo.read()
+	except IOError:
+		print ("Can't open " + filename + " as the file can't be found!")
+	else:
+		words = raw_text.split()
+		print "Approximate amount of words: " + str(len(words))
+		
+filenames = ["alice.txt", 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+
+for file in filenames:
+	count_words(file)
+"""
+
+"""
 try:
-	with open(filename) as AIW_fo:
-		AIW_text = AIW_fo.readlines()
-except IOError:
-	print ("Can't open " + filename + " as the file can't be found!")
+	num_1 = int(raw_input("Enter Number 1: "))
+except ValueError as e:
+	print "'" + e.message.split("'")[1] + "'" + " is not a valid number!"
+else:
+	try:
+		num_2 = int(raw_input("Enter Number 2: "))
+	except ValueError as e:
+		print "'" + e.message.split("'")[1] + "'" + " is not a valid number!"
+	else: 
+		print "Sum of both numbers is: " + str(num_2 + num_1)
+"""
+
+valid = True
+
+while valid:
+	num_1 = raw_input("Enter Number 1: ")
+	num_2 = raw_input("Enter Number 2: ")
+	
+	try:
+		sum = int(num_1) + int(num_2)
+	except ValueError as e:
+		print "'" + e.message.split("'")[1] + "'" + " is not a valid number!"
+		print "Try again!"
+	else:
+		print "Sum = " + str(sum)
+		valid = False
+
+
+
+
 
 
