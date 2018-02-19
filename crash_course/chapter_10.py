@@ -53,7 +53,7 @@ else:
 	else: 
 		print "Sum of both numbers is: " + str(num_2 + num_1)
 """
-
+"""
 valid = True
 
 while valid:
@@ -68,6 +68,46 @@ while valid:
 	else:
 		print "Sum = " + str(sum)
 		valid = False
+"""
+
+import os
+
+def cls():
+	os.system('cls' if os.name == 'nt' else 'clear')
+
+def Menu():
+	cls()
+	
+
+
+raw_text = ""
+try:
+	with open("alice.txt") as fo:
+		raw_text = fo.read()
+except IOError:
+	print ("Can't open as the file can't be found!")
+else:
+	words = raw_text.split()
+	words = [x.rstrip() for x in words]
+	words = [x.lower() for x in words]
+	#print "Approximate amount of words: " + str(len(words))
+
+word_count = {}
+for word in words:
+	if word in word_count:
+		word_count[word] +=1
+	else:
+		word_count[word] = 1
+
+# This will return a list of keys that have been sorted by their values
+high_values = sorted(word_count, key=word_count.__getitem__, reverse=True)
+
+for word in high_values[:10]:
+	print word + ":\t " + str(word_count[word])
+
+
+
+
 
 
 
