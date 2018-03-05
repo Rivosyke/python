@@ -79,7 +79,7 @@ def Menu():
 	cls()
 	
 
-
+"""
 raw_text = ""
 try:
 	with open("alice.txt") as fo:
@@ -104,9 +104,51 @@ high_values = sorted(word_count, key=word_count.__getitem__, reverse=True)
 
 for word in high_values[:10]:
 	print word + ":\t " + str(word_count[word])
+"""
 
+import json
 
-
+def get_stored_username():
+	""" Get Stored Name"""
+	filename = 'username.json'
+	try:
+		with open(filename) as fo:
+			username = json.load(fo)
+	except IOError:
+		return None
+	else:
+		return username
+		
+		
+def get_new_username():
+	username = raw_input("What is your name? ")
+	filename = 'username.json'
+	with open (filename, 'w') as fo:
+		json.dump(username, fo)		
+	return username
+	
+def yes_no(prompt):
+	print prompt,
+	answer = raw_input("(y/n) ")
+	if answer == 'y':
+		return 1
+	else:
+		return 0
+		
+		
+		
+def greet_user():
+	username = get_stored_username()
+	if username:
+		if yes_no("Is " + username + " the correct user? "):
+			print("Welcome back, " + username + "!")
+		else:
+			username = get_new_username()
+	else:
+		username = get_new_username()
+		print("We'll remember you when you come back, " + username + "!")
+			
+greet_user()
 
 
 
